@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #509D7A;
+    height: 100px;
+    font-family: 'Lobster', cursive;
+}
+
+.all-products{
+    background-color: unset;
+    border: unset;
+}
+
+
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-right: 10px;
+}
+
+.logo{
+    font-size: 40px;
+    margin: 0 auto;
+    margin-right: 120;
+    margin-top: 10px;
+    transform: rotate(-15deg)
+
+}
+
+.logOut{
+    background-color: unset;
+    border: unset;
+    margin-right: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+
+
+.logo-project{
+    width: 130px;
+    height: 120px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.new-order img{
+    width: 53px;
+    height: 44px;
+    padding: 0;
+}
+
+.new-order{
+    background-color: unset;
+    border: unset;
+}
+
+.saved-order{
+    background-color: unset;
+    border: unset;
+}

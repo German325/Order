@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.logIn{
+    width: 431px;
+    height: 469px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+    margin-top: 100px;
+    font-family: 'Lobster', cursive;
+}
+
+.logIn_img{
+    width: 340px;
+    height: 330px;
+}
+
+.logIn input{
+    margin-bottom: 0;
+    border-radius: 15px;
+}
+
+.logIn_button{
+    background-color: #509B92;
+    border: unset;
+    border-radius: 20px;
+    width: 100px;
+    height: 70px;
+    font-family: 'Lobster', cursive;
+}
+
+.logIn_registre{
+    background-color: #509B92;
+    border: unset;
+    border-radius: 20px;
+    width: 150px;
+    height: 40px;
+    font-family: 'Lobster', cursive; 
+    margin-left: 60px;
+}
+
+.visial button{
+    background-color: unset;
+    border: unset;
+    font-family: 'Lobster', cursive;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+input:focus{
+    outline: none;
+}
+
+.error{
+    color: red;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
