@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.add{
+    width: 170px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 15px;
+}
+
+.add_title{
+    font-family: 'Lobster', cursive;
+    padding-left: 45px;
+    margin-bottom: 0;
+}
+
+.add_button{
+    background-color: unset;
+    border: unset;
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    margin-left: 65px;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "./LogIn.css"; 
-import MainPage from "../MainPage/MainPage";
+import Header from "../Header/Header";
 import LogicLogIn from "../LogInFire/LogicLogIn"
 
 
@@ -43,13 +43,13 @@ const LogIn = (props) => {
                 <div>{hasAccount ?
                 <>
                 <button className="logIn_button" onClick={handleSignup}>Зарегистрироваться</button>
-                <p className="visial">
-                Если у вас есть аккаунт:  <span className="visial" onClick={()=>setHasAccount(!hasAccount)}>Войти</span></p>
+                <p>
+                Если у вас есть аккаунт:  <span onClick={()=>setHasAccount(!hasAccount)}>Войти</span></p>
                 </> :
                 <>
                 <button className="logIn_registre" onClick={handleLogin}>Войти</button>
-                <p className="visial">
-                Если нет аккаунта:  <span className="visial" onClick={()=>setHasAccount(!hasAccount)}>Зарегистрироваться</span></p>
+                <p>
+                Если нет аккаунта:  <span onClick={()=>setHasAccount(!hasAccount)}>Зарегистрироваться</span></p>
                 </>
                 }
                 

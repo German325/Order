@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #509D7A;
+    height: 100px;
+    font-family: 'Lobster', cursive;
+}
+
+.all-products{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+
+
+.user-info{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-right: 10px;
+}
+
+.logo{
+    font-size: 40px;
+    margin: 0 auto;
+    margin-right: 120;
+    margin-top: 10px;
+    transform: rotate(-15deg)
+
+}
+
+.logOut{
+    background-color: unset;
+    border: unset;
+    margin-right: 10px;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+
+
+.logo-project{
+    width: 130px;
+    height: 120px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.new-order img{
+    width: 53px;
+    height: 44px;
+    padding: 0;
+}
+
+.new-order{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.save-order{
+    margin-top: 25px;
+    margin-left: 20px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product{
+    width: 200px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px;
+    margin-top: 30px;
+    margin-right: 10px;
+    background-color: to-bottom #509D7A, #9DC2CD;
+}
+
+.product_name{
+    
+    border-radius: 10px;
+    
+    text-align: center;
+}
+
+.nameProduct{
+    border-radius: 20px;
+    width: 150px;
+    margin-left: 5px;
+}
+
+.product_buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+
+
+.deleteBtn{
+    border: unset;
+    background-color: unset;
+    margin-left: 125px;
+    margin-top: 5px;
+}
+
+.deleteBtn:hover{
+    background-color: lightcoral;
+    border-radius: 20px;
+}
+
+.newOrder{
+    width: 220px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+.newOrder__date{
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    width: 150px;
+    height: 26px;
+}
+
+.newOrder__quantity_product{
+    display: flex;
+    justify-content: start;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+}
+
+.products_for_order{
+    width: 170px;
+    border-radius: 20px;
+}
+
+.quantity{
+    margin: 0;
+}
+
+.quantity_product__plus{
+    margin-left: 10px;
+    font-size: 15px;
+    border: unset;
+    background-color: unset;
+}
+
+.quantity_product__minus{
+    font-size: 15px;
+    padding-bottom: 5px;
+    border: unset;
+    background-color: unset;
+}
+
+.newOrder_save_or_delete{
+    display: flex; 
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.save{
+    border: unset;
+    background-color: unset;
+    width: 50px;
+    /* position: relative;
+    top: 66px; */
+    font-size: 30px;
+    /* left: 15px; */
+}
+
+.save:hover{
+    color: green;
+}
+
+.delete{
+    width: 50px;
+    /* position: relative;
+    top: 31px;
+    left: 140px; */
+    font-size: 30px;
+    border: unset;
+    background-color: unset;
+}
+
+.delete:hover{
+    color: red;
+}
+
+.add-to-list{
+    border: unset;
+    background-color: unset;
+    font-size: 20px;
+}
+
+.saved-order{
+    width: 200px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.saved-order__title{
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+
+.saved-order__date{
+    margin: 0;
+    font-family: 'Lobster', cursive;
+}
+
+.listItems{
+    text-align: start;
+}
+
+.orders-btn{
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-item{
+    border: unset;
+    background-color: unset;
+}
+
+.delete-item:hover{
+    color: red;
+}

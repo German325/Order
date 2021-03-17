@@ -1,31 +1,39 @@
 import React from "react";
-import "./MainPage.css"
+import {BrowserRouter, Link} from "react-router-dom";
+import "./Header.css"
 
 
-const MainPage = ({handlelogOut}) =>{
-    
+const Header = ({handlelogOut}) =>{
+
         return(
+            
             <div>
         <header>
-            <button className="all-products">
+
+            <Link to="/catalog" className="all-products" >
                 <img src={'Vector.png'} alt="all-products"/>
-            </button>
-            <button className="new-order">
+            </Link>
+
+            <Link to="/newOrder" className="new-order" >
                 <img src={'New-order.png'} alt="new-order"/>
-            </button>
-            <button className="saved-order">
+            </Link>
+
+            <Link to="/savedOrders" className="save-order">
                 <img src={'Checked.png'} alt="saved-order"/>
-            </button>
+            </Link>
 
             <p className="logo">ORder</p>
             
            <button className="logOut" onClick={handlelogOut}>
                Выйти
            </button>
+
         </header>
+
+
         <img className="logo-project" src={"Logo.png"} alt="logo"/>
         </div>
         )
 }
 
-export default MainPage;
+export default Header;

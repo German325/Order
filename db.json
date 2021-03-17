@@ -1,19 +1,80 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    }
-  ],
-  "comments": [
+      "users-email": "test@gmail.ru",
+      "title": "Молоко"
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": 2,
+      "users-email": "test@gmail.ru",
+      "tittle": "Виски Jim-Beam"
+    },
+    {
+      "id": 3,
+      "users-email": "test@gmail.ru",
+      "tittle": "Чай Lipton"
+    },
+    {
+      "id": 4,
+      "title": "Кофе",
+      "users-email": "test@gmail.ru"
+    },
+    {
+      "id": 5,
+      "users-email": "test@gmail.ru",
+      "title": "Coffee"
+    },
+    {
+      "title": "Сок",
+      "id": 6
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "orders": [
+    {
+      "id": "1",
+      "users-email": "test@gmail.ru",
+      "date": "12.02.2021",
+      "products": [
+        {
+          "id": "4",
+          "title": "Кофе"
+        },
+        {
+          "id": "2",
+          "title": "Виски Jim-Beam"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "users-email": "test@gmail.ru",
+      "date": "13.02.2021",
+      "products": [
+        {
+          "id": "4",
+          "title": "Кофе"
+        },
+        {
+          "id": "2",
+          "title": "Виски Jim-Beam"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "users-email": "test@gmail.ru",
+      "date": "14.02.2021",
+      "products": [
+        {
+          "id": "4",
+          "title": "Кофе"
+        },
+        {
+          "id": "2",
+          "title": "Виски Jim-Beam"
+        }
+      ]
+    }
+  ]
 }

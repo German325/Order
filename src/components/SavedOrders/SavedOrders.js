@@ -1,0 +1,15 @@
+import React from "react";
+import "./SavedOrders.css";
+
+
+const SavedOrders = () => {
+    
+        return(
+            <div>
+            <h1>Hello</h1>
+            </div>
+        )
+    
+}
+
+export default SavedOrders;

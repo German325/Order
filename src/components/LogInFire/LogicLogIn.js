@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import "firebase/auth";
 import fireBase from "../../firebase";
 import LogIn from "../LogIn/LogIn"
-import MainPage from "../MainPage/MainPage"
+import Header from "../Header/Header"
 import { Component } from "react";
 
 
@@ -71,6 +71,7 @@ const LogicLogIn = () => {
         fireBase
         .auth()
         .signOut();
+        window.location.assign('http://localhost:3000')
     }
 
     const authListener = () => {
@@ -93,7 +94,7 @@ const LogicLogIn = () => {
     return(
         <div>
         {user ? 
-        <MainPage handlelogOut={handlelogOut}/> :
+        <Header handlelogOut={handlelogOut}/> :
              <LogIn 
         email={email} 
         setEmail={setEmail} 
