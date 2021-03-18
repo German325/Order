@@ -32,6 +32,7 @@ const NewOrder = () => {
             setListItems([
                 ...listItems,
                 {
+                    id:Date.now(),
                     title:searchTitle
                 }
             ])
