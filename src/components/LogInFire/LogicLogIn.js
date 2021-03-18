@@ -35,12 +35,16 @@ const LogicLogIn = () => {
         .catch(err => {
             switch(err.code){
                 case "auth/invalid-email":
+                    setEmailError({emailError:'Неверная почта'})
+                   break;
                 case "auth/user-disabled":
+                    setEmailError({emailError:'Повторите попытку'})
+                    break
                 case "auth/user-not-found":
-                    setEmailError(err.message)
+                    setEmailError({emailError:'Такого пользователя не существует'})
                     break;
                 case "auth/wrong-password":
-                    setPasswordError(err.message)
+                   setPasswordError({ passwordError:'Неверный пароль'})
                     break;
             }
         })
@@ -57,12 +61,14 @@ const LogicLogIn = () => {
         .catch(err =>{
             switch (err.code){
                 case "auth/email-alreay-in-use":
+                    setEmailError({emailError:'Эта почта уже используется'})
+                
                 case "auth/invalid-email":
-                    setEmailError(err.message)
-                    break;
+                    setEmailError({emailError:'Неверная почта'})
+            
                 case "auth/weak-password": 
-                    setPasswordError(err.message)
-                    break;
+                setPasswordError({passwordError:'Пароль должен быть больше 6 символов'})
+                    
             }
         })
     }
@@ -103,8 +109,8 @@ const LogicLogIn = () => {
         handleLogin={handleLogin}
         handleSignup={handleSignup}
         setHasAccount={setHasAccount}
-        emailError={emailError}
-        passwordError={passwordError}
+        setemailError={emailError}
+        setpasswordError={passwordError}
         hasAccount={hasAccount}
         />
         }
