@@ -10,8 +10,7 @@ const NewOrder = () => {
         const [searchTitle, setSearchTitle] = useState('')
         const [listItems, setListItems] = useState([])
         const [itemsForNewList, setItemsForNewList] = useState([])
-        const [quantity, setQuantity] = useState('')
-
+        const [products, setProducts] = useState([])
         
 
         const clickHandlerAddToList = () => {
@@ -68,12 +67,27 @@ const NewOrder = () => {
             const raw = localStorage.getItem('order') || []
             setOrder(JSON.parse(raw))
             console.log(raw)
+            
+            const productsProd = JSON.parse(localStorage.getItem('prod'))
+            
+            setProducts([
+                ...productsProd
+            ])
+            //console.log(products)
         },[])
         
         useEffect(() => {
             localStorage.setItem('order', JSON.stringify(order))
         },[order])
-        
+
+        const clickHandlerPlus = () => {
+                
+        }
+
+        const clickHandlerMinus = () => {
+            
+        }
+
         const mappedNewOrders = 
             order.map(el => <div key={el.id} className="saved-order">
                     <button className="deleteBtn" onClick={() => clickHandlerDelete(el.id)}>Удалить</button>
@@ -82,7 +96,7 @@ const NewOrder = () => {
                    <div className="listItems">
                         <ul>
                         {itemsForNewList.map(item=> 
-                                <li className="listItems">{item.title}<p>{quantity}</p></li>
+                                <li className="listItems">{item.title}<p></p></li>
                         )} 
                         </ul>
                     </div>
@@ -100,19 +114,34 @@ const NewOrder = () => {
                     onChange={(event) => setDate(event.target.value)}
                 />
                 <div className="newOrder__quantity_product">
-                    <input
+                    {/* <input
                     className="products_for_order" 
                     type="text" 
                     placeholder="выбрать из ассортимента"
                     value={searchTitle}
                     onChange={(event) => setSearchTitle(event.target.value)}
-                    />
+                    /> */}
+                    <select 
+                    value={searchTitle} 
+                    onChange={(event) => setSearchTitle(event.target.value)} 
+                    className="products_for_order"><option>Ассортимент</option>
+                    {products.map(item => <option  className="products-from-prod">{item.title}</option>)}
+                         
+                    </select>
                     <button className="add-to-list" onClick={()=>clickHandlerAddToList()} >+</button>
                 </div>
                 <div className="listItems">
                     <ul>
                     {listItems.map(el=> 
-                        <li className="listItems">{el.title}<input type="number" className="quantity-products" value={quantity} onChange={(event)=> setQuantity(event.target.value)}/><button onClick={() => clickHandlerDeleteItem(el.id)} className="delete-item">X</button></li>
+                        <li 
+                        className="listItems">{el.title}
+                            {/* <span className="quantityBtn">
+                            <button onClick={()=>clickHandlerPlus()} className="quantity-plus">+</button>
+                            <p className="quantity-title">{el.quantity}</p>
+                            <button onClick={clickHandlerMinus} className="quantity-minus">-</button></span> */}
+                            <button onClick={() => clickHandlerDeleteItem(el.id)} 
+                            className="delete-item">X</button>
+                        </li>
                     )} 
                     </ul>
                 </div>

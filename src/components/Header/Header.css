@@ -14,7 +14,10 @@ header{
     margin-left: 20px;
 }
 
-
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .user-info{
     display: flex;
@@ -77,6 +80,7 @@ header{
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 20px;
+    font-family:'Comfortaa', cursive;
 }
 
 .product{
@@ -88,6 +92,7 @@ header{
     margin-top: 30px;
     margin-right: 10px;
     background-color: to-bottom #509D7A, #9DC2CD;
+    font-family:'Comfortaa', cursive;
 }
 
 .product_name{
@@ -110,7 +115,11 @@ header{
     justify-content: space-around;
 }
 
-
+.quantityBtn{
+    width: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
 
 
 
@@ -137,13 +146,13 @@ header{
     /* margin-top: 30px;
     margin-left: 15px; */
     position: relative;
-    left:20px;
+    left:200px;
     top: 20px;
 }
 
 .add-title{
-    font-family: 'Lobster', cursive;
-    padding-left: 35px;
+    font-family:'Comfortaa', cursive;
+    padding-left: 20px;
     margin-bottom: 0;
     font-size:30px;
     margin-top: 10px;
@@ -152,7 +161,7 @@ header{
 .newOrder__date{
     margin-top: 10px;
     margin-left: 10px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 250px;
     height: 26px;
     font-size: 20px;
@@ -168,8 +177,28 @@ header{
 
 .products_for_order{
     width: 250px;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 20px;
+}
+
+.quantity-plus{
+    background-color: unset;
+    border: unset;
+}
+
+.quantity-minus{
+    background-color: unset;
+    border: unset;
+}
+
+.quantity-title{
+    margin: 0;
+}
+
+.quantityBtn{
+    height: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 .quantity{
@@ -233,6 +262,7 @@ header{
 
 .listItems{
     font-size: 20px;
+    
 }
 
 .saved-order{
@@ -244,11 +274,12 @@ header{
     text-align: center;
     margin-top: 20px;
     margin-left: 15px;
+    font-family:'Comfortaa', cursive;
 }
 
 .saved-order__title{
     margin: 0;
-    font-family: 'Lobster', cursive;
+    font-family:'Comfortaa', cursive;
 }
 
 .saved-order__date{
@@ -258,6 +289,9 @@ header{
 
 .listItems{
     text-align: start;
+    display: flex;
+    font-family:'Comfortaa', cursive;
+
 }
 
 .orders-btn{

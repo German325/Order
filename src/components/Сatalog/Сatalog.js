@@ -31,7 +31,9 @@ function Catalog() {
 
     const clickHandlerDelete = (id) => {
         const cards = JSON.parse(localStorage.getItem('prod'))
+        
         let newCards = cards.filter((item) => item.id !== id)
+        
         localStorage.setItem('prod', JSON.stringify(newCards))
         setProd([
             ...newCards
