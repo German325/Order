@@ -55,6 +55,11 @@ const NewOrder = () => {
             
         }
 
+        const clickHandlerClear = () => {
+            setDate('');
+            setListItems([])
+        }
+
 
         useEffect(()=> {
             const raw = localStorage.getItem('order') || []
@@ -111,7 +116,7 @@ const NewOrder = () => {
                 </div>
                 <div className="orders-btn">
                     <button className="save" onClick={clickHandlerSave}>✓</button>
-                    <button className="delete">X</button>
+                    <button className="delete" onClick={clickHandlerClear}>X</button>
                 </div>
             </div>
 
