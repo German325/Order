@@ -10,17 +10,17 @@ const Header = ({handlelogOut}) =>{
             <div>
         <header>
 
-            <Link to="/catalog" className="all-products" >
-                <img src={'Vector.png'} alt="all-products"/>
+            <Link to="/catalog" className="all-products" className="link">
+                {/* <img src={'Vector.png'} alt="all-products"/> */}
+                Ассортимент
             </Link>
 
-            <Link to="/newOrder" className="new-order" >
-                <img src={'New-order.png'} alt="new-order"/>
+            <Link to="/newOrder" className="new-order" className="link">
+                {/* <img src={'New-order.png'} alt="new-order"/> */}
+                Новая заявка
             </Link>
 
-            <Link to="/savedOrders" className="save-order">
-                <img src={'Checked.png'} alt="saved-order"/>
-            </Link>
+            
 
             <p className="logo">ORder</p>
             
@@ -37,3 +37,9 @@ const Header = ({handlelogOut}) =>{
 }
 
 export default Header;
+
+
+{/* <Link to="/savedOrders" className="save-order" className="link">
+              </Link>  {/* <img src={'Checked.png'} alt="saved-order"/> */}
+             
+            

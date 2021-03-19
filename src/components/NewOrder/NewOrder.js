@@ -10,6 +10,22 @@ const NewOrder = () => {
         const [searchTitle, setSearchTitle] = useState('')
         const [listItems, setListItems] = useState([])
         const [itemsForNewList, setItemsForNewList] = useState([])
+        const [quantity, setQuantity] = useState('')
+
+        
+
+        const clickHandlerAddToList = () => {
+            setListItems([
+                ...listItems,
+                {
+                    id:Date.now(),
+                    title:searchTitle,
+                    quantity:1
+                }
+            ])
+            setSearchTitle('') 
+            
+        }
 
         const clickHandlerDelete = (id) => {
             const orders = JSON.parse(localStorage.getItem('order'))
@@ -18,18 +34,6 @@ const NewOrder = () => {
             setOrder([
                 ...newOrders
             ])
-        }
-
-        const clickHandlerAddToList = () => {
-            setListItems([
-                ...listItems,
-                {
-                    id:Date.now(),
-                    title:searchTitle
-                }
-            ])
-            setSearchTitle('') 
-            
         }
 
         
@@ -60,17 +64,16 @@ const NewOrder = () => {
             setListItems([])
         }
 
-
         useEffect(()=> {
             const raw = localStorage.getItem('order') || []
             setOrder(JSON.parse(raw))
             console.log(raw)
         },[])
-
+        
         useEffect(() => {
             localStorage.setItem('order', JSON.stringify(order))
         },[order])
-
+        
         const mappedNewOrders = 
             order.map(el => <div key={el.id} className="saved-order">
                     <button className="deleteBtn" onClick={() => clickHandlerDelete(el.id)}>Удалить</button>
@@ -78,17 +81,16 @@ const NewOrder = () => {
                    <p className="saved-order__date">{el.date}</p>
                    <div className="listItems">
                         <ul>
-                        {itemsForNewList.map(el=> 
-                                <li>{el.title}</li>
+                        {itemsForNewList.map(item=> 
+                                <li className="listItems">{item.title}<p>{quantity}</p></li>
                         )} 
                         </ul>
                     </div>
                </div>)
-        
 
 
         return(
-        <div>
+        <div className="main-container">
             <div className="newOrder">
                 <h3 className="add_title">Новая заявка</h3>
                 <input 
@@ -110,7 +112,7 @@ const NewOrder = () => {
                 <div className="listItems">
                     <ul>
                     {listItems.map(el=> 
-                        <li>{el.title}<button onClick={() => clickHandlerDeleteItem(el.id)} className="delete-item">X</button></li>
+                        <li className="listItems">{el.title}<input type="number" className="quantity-products" value={quantity} onChange={(event)=> setQuantity(event.target.value)}/><button onClick={() => clickHandlerDeleteItem(el.id)} className="delete-item">X</button></li>
                     )} 
                     </ul>
                 </div>
@@ -119,10 +121,11 @@ const NewOrder = () => {
                     <button className="delete" onClick={clickHandlerClear}>X</button>
                 </div>
             </div>
-
+                        
             <main className="container">
-               {mappedNewOrders} 
+               {mappedNewOrders}
             </main>
+
 
             <img className="logo-project" src={"Logo.png"} alt="logo"/>
         </div>

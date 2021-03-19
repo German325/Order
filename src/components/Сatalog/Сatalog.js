@@ -43,7 +43,7 @@ function Catalog() {
         return(
         <div>
             <div className="add">
-                <h3 className="add_title">Добавить</h3>
+                <h3 className="add-title">Добавить</h3>
                 <input
                 className="nameProduct" 
                 type='text' 

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
 
 header{
     display: flex;
@@ -25,10 +26,10 @@ header{
 .logo{
     font-size: 40px;
     margin: 0 auto;
-    margin-right: 120;
-    margin-top: 10px;
-    transform: rotate(-15deg)
-
+    margin-right: 550px;
+    margin-top: 20px;
+    transform: rotate(-15deg);
+    color: white;
 }
 
 .logOut{
@@ -37,6 +38,12 @@ header{
     margin-right: 10px;
     font-family: 'Lobster', cursive;
     font-size: 30px;
+    font-family:'Comfortaa', cursive;
+    color:rgb(202, 193, 193);
+}
+
+.logOut:hover{
+    color: white;
 }
 
 
@@ -69,10 +76,11 @@ header{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .product{
-    width: 200px;
+    width: auto;
     height: 100px;
     border: 1px solid black;
     border-radius: 20px;
@@ -92,7 +100,9 @@ header{
 .nameProduct{
     border-radius: 20px;
     width: 150px;
-    margin-left: 5px;
+    height: 30px;
+    margin-left: 20px;
+    font-size: 20px;
 }
 
 .product_buttons{
@@ -117,23 +127,35 @@ header{
 }
 
 .newOrder{
-    width: 220px;
+    width: 320px;
     height: auto;
     border: 1px solid black;
     border-radius: 20px;
     box-shadow: 0px 4px 4px;
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
-    margin-left: 15px;
+    /* margin-top: 30px;
+    margin-left: 15px; */
+    position: relative;
+    left:20px;
+    top: 20px;
+}
+
+.add-title{
+    font-family: 'Lobster', cursive;
+    padding-left: 35px;
+    margin-bottom: 0;
+    font-size:30px;
+    margin-top: 10px;
 }
 
 .newOrder__date{
     margin-top: 10px;
     margin-left: 10px;
     border-radius: 15px;
-    width: 150px;
+    width: 250px;
     height: 26px;
+    font-size: 20px;
 }
 
 .newOrder__quantity_product{
@@ -145,12 +167,20 @@ header{
 }
 
 .products_for_order{
-    width: 170px;
+    width: 250px;
     border-radius: 20px;
+    font-size: 20px;
 }
 
 .quantity{
     margin: 0;
+}
+
+.quantity-products{
+    width: 35px;
+    margin-left: 5px;
+    border-radius: 15px;
+    text-align: center;
 }
 
 .quantity_product__plus{
@@ -177,10 +207,7 @@ header{
     border: unset;
     background-color: unset;
     width: 50px;
-    /* position: relative;
-    top: 66px; */
     font-size: 30px;
-    /* left: 15px; */
 }
 
 .save:hover{
@@ -189,9 +216,6 @@ header{
 
 .delete{
     width: 50px;
-    /* position: relative;
-    top: 31px;
-    left: 140px; */
     font-size: 30px;
     border: unset;
     background-color: unset;
@@ -204,6 +228,10 @@ header{
 .add-to-list{
     border: unset;
     background-color: unset;
+    font-size: 30px;
+}
+
+.listItems{
     font-size: 20px;
 }
 
@@ -244,4 +272,21 @@ header{
 
 .delete-item:hover{
     color: red;
+}
+
+.main-container{
+    
+}
+
+.link{
+    color: rgb(202, 193, 193);
+    margin-top: 40px;
+    margin-left: 25px;
+    font-size: 20px;
+    text-decoration: none;
+    font-family:'Comfortaa', cursive;
+}
+
+.link:hover{
+    color: white;
 }
